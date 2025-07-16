@@ -1,27 +1,46 @@
-Node.js MongoDB User API (Prueba)
-Esta es una pequeña prueba hecha en Node.js que simula la gestión de usuarios usando MongoDB. La conexión a MongoDB se establece, pero no se utiliza una base de datos real con datos persistentes.
+# Proyecto Node.js - Prueba con MongoDB (Simulada)
 
-Tecnologías usadas
-Node.js
+Este es un proyecto simple hecho en Node.js que simula operaciones básicas con MongoDB para **agregar** y **listar usuarios**.  
+No utiliza una base de datos real; las pruebas se realizan usando Thunder Client para enviar peticiones HTTP.
 
-Express
+---
 
-Mongoose (para conexión a MongoDB)
+## Tecnologías usadas
 
-Thunder Client (para pruebas de API)
+- Node.js  
+- Express.js  
+- MongoDB (simulado)  
+- Thunder Client (para pruebas de API)  
 
-Descripción
-La aplicación se conecta a MongoDB (local o remota) a través de Mongoose, pero la base de datos utilizada es solo una simulación para propósitos de prueba. No hay datos persistentes almacenados ni una base real configurada.
+---
 
-Puedes agregar y listar usuarios mediante peticiones HTTP usando Thunder Client u otra herramienta similar.
+## Descripción
 
-Instalación
+Este proyecto contiene una API REST básica que permite:
+
+- **Agregar usuarios** (POST)  
+- **Listar usuarios** (GET)  
+
+Aunque la aplicación se conecta a MongoDB (local o remota) usando Mongoose, no se utiliza una base de datos real con datos persistentes; los datos se manejan en memoria para facilitar las pruebas.
+
+---
+
+## Instalación
+
+1. Clona el repositorio:  
+   ```bash
+   git clone <URL-del-repo>
+Instala las dependencias:
+
 bash
 Copiar
 Editar
 npm install
 Variables de entorno
-Configura tu variable de entorno MONGODB_URI para la conexión a MongoDB si quieres conectarte a una base de datos remota, o se usará la base local por defecto:
+Configura la variable MONGODB_URI si quieres conectar a una base remota. Por defecto, se conecta a MongoDB local en:
+mongodb://localhost:27017/mydatabase
+
+Ejemplo:
 
 bash
 Copiar
@@ -32,7 +51,9 @@ bash
 Copiar
 Editar
 npm start
-Endpoints
+
+Endpoints:
+
 POST /users — Agregar un nuevo usuario
 
 GET /users — Listar usuarios
